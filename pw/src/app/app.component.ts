@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   length = 0;
-  useLetters = false;
-  useNumbers = false;
-  useSymbols = false;
+  includeLetters = false;
+  includeNumbers = false;
+  includeSymbols = false;
   password = '';
 
   onChangeLength(value: string) {
@@ -20,14 +20,14 @@ export class AppComponent {
   }
 
   onChangeUseLetters() {
-    this.useLetters = !this.useLetters;
+    this.includeLetters = !this.includeLetters;
   }
 
   onChangeUseNumbers() {
-    this.useNumbers = !this.useNumbers;
+    this.includeNumbers = !this.includeNumbers;
   }
   onChangeUseSymbols() {
-    this.useSymbols = !this.useSymbols;
+    this.includeSymbols = !this.includeSymbols;
   }
 
   onButtonClick() {
@@ -36,13 +36,13 @@ export class AppComponent {
     const symbols = '!@#$%^&*()';
 
     let validChars = '';
-    if (this.useLetters) {
+    if (this.includeLetters) {
       validChars += letters;
     }
-    if (this.useNumbers) {
+    if (this.includeNumbers) {
       validChars += numbers;
     }
-    if (this.useSymbols) {
+    if (this.includeSymbols) {
       validChars += symbols;
     }
 
