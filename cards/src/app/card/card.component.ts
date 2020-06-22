@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-card',
@@ -6,26 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card.component.css'],
 })
 export class CardComponent implements OnInit {
-  posts = [
-    {
-      title: 'Post 1',
-      imageUrl: 'assets/tree.jpeg',
-      username: 'nature',
-      content: 'I saw this neat tree today.',
-    },
-    {
-      title: 'Post 1',
-      imageUrl: 'assets/mountain.jpeg',
-      username: 'nature',
-      content: 'I saw this neat tree today.',
-    },
-    {
-      title: 'Post 1',
-      imageUrl: 'assets/tree.jpeg',
-      username: 'nature',
-      content: 'I saw this neat tree today.',
-    },
-  ];
+  @Input() title = '';
+  @Input() imageUrl = '';
+  @Input() content = '';
+  @Input() username = '';
 
-  ngOnInit(): void {}
+  constructor() {}
+
+  ngOnInit() {}
 }
