@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<div class="us container">
+  <div class="ui secondary pointing menu">
+    <a routerLink="/elements" routerLinkActive="active" class="item"
+      >Elements</a
+    >
+    <a routerLink="/collections" routerLinkActive="active" class="item"
+      >Collections</a
+    >
+  </div>
+
+  <div class="ui segment">
+    <router-outlet></router-outlet>
+  </div>
+</div>
