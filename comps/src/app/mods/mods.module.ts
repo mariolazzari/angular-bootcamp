@@ -3,8 +3,12 @@ import { CommonModule } from '@angular/common';
 
 import { ModsRoutingModule } from './mods-routing.module';
 
+
 @NgModule({
   declarations: [],
-  imports: [CommonModule, ModsRoutingModule],
+  imports: [
+    CommonModule,
+    ModsRoutingModule
+  ]
 })
-export class ModsModule {}
+export class ModsModule { }

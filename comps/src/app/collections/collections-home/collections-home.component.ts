@@ -9,7 +9,7 @@ export class CollectionsHomeComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
   }
 
 }
