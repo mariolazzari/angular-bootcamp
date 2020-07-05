@@ -1,19 +1,19 @@
 import { async, ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { ElementsHomeComponent } from "./elements-home.component";
+import { DividerComponent } from "./divider.component";
 
-describe("ElementsHomeComponent", () => {
-  let component: ElementsHomeComponent;
-  let fixture: ComponentFixture<ElementsHomeComponent>;
+describe("DividerComponent", () => {
+  let component: DividerComponent;
+  let fixture: ComponentFixture<DividerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ElementsHomeComponent],
+      declarations: [DividerComponent],
     }).compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ElementsHomeComponent);
+    fixture = TestBed.createComponent(DividerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
