@@ -1,15 +1,16 @@
-import { async, ComponentFixture, TestBed } from "@angular/core/testing";
+import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DividerComponent } from "./divider.component";
+import { DividerComponent } from './divider.component';
 
-describe("DividerComponent", () => {
+describe('DividerComponent', () => {
   let component: DividerComponent;
   let fixture: ComponentFixture<DividerComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [DividerComponent],
-    }).compileComponents();
+      declarations: [ DividerComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
@@ -18,7 +19,7 @@ describe("DividerComponent", () => {
     fixture.detectChanges();
   });
 
-  it("should create", () => {
+  it('should create', () => {
     expect(component).toBeTruthy();
   });
 });
