@@ -3,14 +3,10 @@ import { TestBed } from '@angular/core/testing';
 import { WikipediaService } from './wikipedia.service';
 
 describe('WikipediaService', () => {
-  let service: WikipediaService;
-
-  beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(WikipediaService);
-  });
+  beforeEach(() => TestBed.configureTestingModule({}));
 
   it('should be created', () => {
+    const service: WikipediaService = TestBed.get(WikipediaService);
     expect(service).toBeTruthy();
   });
 });

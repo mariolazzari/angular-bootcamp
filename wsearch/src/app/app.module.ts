@@ -10,6 +10,6 @@ import { PageListComponent } from './page-list/page-list.component';
   declarations: [AppComponent, SearchBarComponent, PageListComponent],
   imports: [BrowserModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
