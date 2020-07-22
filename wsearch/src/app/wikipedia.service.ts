@@ -1,8 +1,33 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
+import { Observable } from 'rxjs';
+
+interface Car {
+  year: number;
+  color: string;
+  running: boolean;
+  make: {
+    name: string;
+    dateCreated: number;
+  };
+}
+
+const observable = new Observable<Car>((observer) => {
+  observer.next({
+    year: 2020,
+    color: 'red',
+    running: true,
+    make: { name: 'Ferrari', dateCreated: 2000 },
+  });
+});
+
+observable.subscribe((value) => {
+  console.log(value);
+});
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class WikipediaService {
   constructor(private http: HttpClient) {}
@@ -15,8 +40,8 @@ export class WikipediaService {
         list: 'search',
         utf8: '1',
         srsearch: term,
-        origin: '*'
-      }
+        origin: '*',
+      },
     });
   }
 }
