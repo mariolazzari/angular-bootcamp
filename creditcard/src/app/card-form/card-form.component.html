@@ -1,20 +1,5 @@
 <form [formGroup]="cardForm">
-  <input formControlName="name" />
-  <ng-container *ngIf="cardForm.controls.name.errors">
-    <div *ngIf="cardForm.controls.name.errors.required">
-      Value is required
-    </div>
-    <div
-      *ngIf="
-        cardForm.controls.name.dirty &&
-        cardForm.controls.name.touched &&
-        cardForm.controls.name.errors.minlength
-      "
-    >
-      Value must be longer
-      {{ cardForm.controls.name.errors.minlength.requiredLength }}
-    </div>
-  </ng-container>
+  <app-input [control]="cardForm.get('name')"></app-input>
 </form>
 
 <hr />
