@@ -10,6 +10,6 @@ import { InputComponent } from './input/input.component';
   declarations: [AppComponent, CardFormComponent, InputComponent],
   imports: [BrowserModule, ReactiveFormsModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
