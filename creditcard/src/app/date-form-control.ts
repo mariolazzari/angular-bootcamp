@@ -1,7 +1,12 @@
 import { FormControl } from '@angular/forms';
 
 export class DateFormControl extends FormControl {
-  setValue(value: string, options: any) {
+  setValue(value: string | null, options: any) {
+    if (!value) {
+      super.setValue('', { ...options, emitModelToViewChange: true });
+      return;
+    }
+
     if (value.match(/[^0-9|\/]/gi)) {
       super.setValue(this.value, { ...options, emitModelToViewChange: true });
       return;
