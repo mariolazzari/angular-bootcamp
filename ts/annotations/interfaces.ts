@@ -18,7 +18,7 @@ const myDrink = {
   sugar: 40,
 
   summary(): string {
-    return "My drink has " + this.sugars + " grams of sugar";
+    return `My drink has ${this.sugars} grams of sugar`;
   },
 };
 
