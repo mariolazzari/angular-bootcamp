@@ -10,6 +10,6 @@ import { AuthModule } from './auth/auth.module';
   declarations: [AppComponent],
   imports: [BrowserModule, AppRoutingModule, AuthModule, HttpClientModule],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule {}
