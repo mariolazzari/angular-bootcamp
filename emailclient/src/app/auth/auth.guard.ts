@@ -6,17 +6,18 @@ import {
   ActivatedRouteSnapshot,
   RouterStateSnapshot,
   UrlTree,
-  Resolve
+  Resolve,
+  Router
 } from '@angular/router';
 import { Observable } from 'rxjs';
-import { take, skipWhile } from 'rxjs/operators';
+import { take, skipWhile, tap } from 'rxjs/operators';
 import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthGuard implements CanLoad {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   canLoad(
     route: Route,
@@ -24,7 +25,12 @@ export class AuthGuard implements CanLoad {
   ): Observable<boolean> | Promise<boolean> | boolean {
     return this.authService.signedin$.pipe(
       skipWhile(value => value === null),
-      take(1)
+      take(1),
+      tap(authenticated => {
+        if (!authenticated) {
+          this.router.navigateByUrl('/');
+        }
+      })
     );
   }
 }
